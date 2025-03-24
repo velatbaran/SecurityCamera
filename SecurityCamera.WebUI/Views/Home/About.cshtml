@@ -1,0 +1,116 @@
+﻿@model AboutCommentviewModel
+
+@{
+    ViewData["Title"] = "Hakkımızda";
+}
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+    <div class="heading">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-12">
+                    <h1>Hakkımızda</h1>
+                    <h3 class="mb-0"><span>En iyi güvenlik kamera seti çeşitlerimizi, uygun fiyatlar ihtiyacınıza göre renkli veya normal görüş seçimini sitemizden seçim yaparak iletişime geçebilirsiniz. Set kamera içindeki bütün ekipmanlar 2 yıl değişim garantilidir..</span></h3>
+                    <a href="/Home/Contact" class="cta-btn">Bize Ulaşın<br></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/Home/Index">Anasayfa</a></li>
+                <li class="current">Hakkımızda</li>
+            </ol>
+        </div>
+    </nav>
+</div><!-- End Page Title -->
+<!-- About Section -->
+<section id="about" class="about section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+            <div class="col-lg-6">
+                <img src="/img/about/@Model.About.Image" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 content">
+                <h4 class="py-3" >
+                    @* @Html.Raw(Model.Description) *@
+                    @Model.About.Description
+                </h4>
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- /About Section -->
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Yorumlar</h2>
+        <p>Hakkınımızda ne söylüyorlar?</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  },
+                  "breakpoints": {
+                    "320": {
+                      "slidesPerView": 1,
+                      "spaceBetween": 40
+                    },
+                    "1200": {
+                      "slidesPerView": 3,
+                      "spaceBetween": 1
+                    }
+                  }
+                }
+            </script>
+            <div class="swiper-wrapper">
+
+                @if (Model is not null || Model.Comments.Count > 0)
+                {
+                    @foreach (var item in Model.Comments)
+                    {
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    @item.Description
+                                </p>
+                                <div class="profile mt-auto">
+                                    <img src="~/img/comment.png" class="testimonial-img" />
+                                    <h3>@item.Name</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+                    }
+                }
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+</section><!-- /Testimonials Section -->

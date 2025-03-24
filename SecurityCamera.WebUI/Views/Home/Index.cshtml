@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Galery>
+
+@{
+    ViewData["Title"] = "Anasayfa";
+}
+
+<!-- Hero Section -->
+<section id="hero" class="hero section">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="100">
+                <h3><span>Kamera sistemlerimizle ile evinizi, iş yerinizi korumaya alabilirsiniz. Kamera sistemlerimiz ve fiyatlarımız hakkında bilgi almak için bizimle irtibata geçebilirsiniz.</span></h3>
+                <a href="/Home/Contact" class="btn-get-started">İletişime Geçin<br></a>
+            </div>
+        </div>
+    </div>
+
+</section><!-- /Hero Section -->
+<!-- Gallery Section -->
+<section id="gallery" class="gallery section">
+
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+            @if (Model is not null || Model.ToList().Count > 0)
+            {
+                @foreach (var item in Model)
+                {
+                    <partial name="_PartialGalery" model="item" />
+                }
+            }
+        </div>
+    </div>
+</section>
+
+<!-- /Gallery Section -->
+

@@ -1,0 +1,111 @@
+﻿@model AppUser
+
+@{
+    ViewData["Title"] = "İletişim";
+}
+
+<!-- Page Title -->
+<div class="page-title" data-aos="fade">
+    <div class="heading">
+        <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-12">
+                    <h1>İletişim</h1>
+                    <h3 class="mb-0"><span>Sunduğumuz yenileklere anında haberdar olmak için lütfen bizimle irtibata geçiniz.</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="/Home/Index">Anasayfa</a></li>
+                <li class="current">İletişim</li>
+            </ol>
+        </div>
+    </nav>
+</div><!-- End Page Title -->
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-5">
+
+                <div class="col-lg-4">
+                    <div class="info-item d-flex align-items-center">
+                        <i class="bi bi-geo-alt flex-shrink-0"></i>
+                        <div>
+                            <h3>Konum</h3>
+                            @* <p>@ViewBag.Address</p> *@
+                            <p>@Model.Address</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-lg-4">
+                    <div class="info-item d-flex align-items-center">
+                        <i class="bi bi-telephone flex-shrink-0"></i>
+                        <div>
+                            <h3>Telefon</h3>
+                            @* <p>@ViewBag.Phone1 - @ViewBag.Phone2</p> *@
+                            <p>@Model.Phone1 - @Model.Phone2</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-lg-4">
+                    <div class="info-item d-flex align-items-center">
+                        <i class="bi bi-envelope flex-shrink-0"></i>
+                        <div>
+                            <h3>Email</h3>
+                            @* <p>@ViewBag.Email</p> *@
+                            <p>@Model.Email</p>
+                        </div>
+                    </div>
+                </div><!-- End Info Item -->
+
+            </div>
+        </div>
+
+        <div class="row gy-4">
+            <div class="col-md-6">
+                <form asp-action="Contact" asp-controller="Home" method="post">
+                    <div class="row gy-4" style="background-color:black;">
+
+                        <div class="col-md-6">
+                            <input type="text" name="_name" class="form-control" placeholder="Adınız" required="">
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <input type="email" class="form-control" name="_email" placeholder="Email" required="">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="_subject" placeholder="Konu" required="">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="_phone" placeholder="Telefon(Opsiyonel)">
+                        </div>
+
+                        <div class="col-md-12">
+                            <textarea class="form-control" name="_message" rows="6" placeholder="Mesajınız" required=""></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-success">Mesajı Gönder</button>
+                        </div>
+
+                    </div>
+                </form><!-- End Contact Form -->
+            </div>
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24236.022824429954!2d43.08118784692614!3d40.596727806570605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40698ed9cd732267%3A0x46d5117e984d216!2sKars%2C%20Kars%20Merkez%2FKars!5e0!3m2!1str!2str!4v1736768529940!5m2!1str!2str" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+</section><!-- /Contact Section -->

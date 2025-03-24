@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityCamera.WebUI", "SecurityCamera.WebUI\SecurityCamera.WebUI.csproj", "{C9C405F2-8964-4EAC-8841-4007BA3A98FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityCamera.Core", "SecurityCamera.Core\SecurityCamera.Core.csproj", "{793E2C9E-CDC0-46AD-B474-56F0ECB7B0CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityCamera.Data", "SecurityCamera.Data\SecurityCamera.Data.csproj", "{DB930B9C-32CD-4CA4-99D4-0E0B11563245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityCamera.Service", "SecurityCamera.Service\SecurityCamera.Service.csproj", "{A27234A4-D31B-4F33-A7E6-BFEC8FC78084}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9C405F2-8964-4EAC-8841-4007BA3A98FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C405F2-8964-4EAC-8841-4007BA3A98FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C405F2-8964-4EAC-8841-4007BA3A98FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C405F2-8964-4EAC-8841-4007BA3A98FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{793E2C9E-CDC0-46AD-B474-56F0ECB7B0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793E2C9E-CDC0-46AD-B474-56F0ECB7B0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793E2C9E-CDC0-46AD-B474-56F0ECB7B0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793E2C9E-CDC0-46AD-B474-56F0ECB7B0CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB930B9C-32CD-4CA4-99D4-0E0B11563245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB930B9C-32CD-4CA4-99D4-0E0B11563245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB930B9C-32CD-4CA4-99D4-0E0B11563245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB930B9C-32CD-4CA4-99D4-0E0B11563245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27234A4-D31B-4F33-A7E6-BFEC8FC78084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27234A4-D31B-4F33-A7E6-BFEC8FC78084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27234A4-D31B-4F33-A7E6-BFEC8FC78084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27234A4-D31B-4F33-A7E6-BFEC8FC78084}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

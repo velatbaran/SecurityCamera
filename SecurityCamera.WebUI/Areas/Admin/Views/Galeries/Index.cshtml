@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Galery>
+
+@{
+    ViewData["Title"] = "Çalışmalar";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i> Yeni Ekle</a>
+</p>
+<hr />
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Client)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkingDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkingName)
+                </td>
+                <td>
+                    @Html.Raw(item.Description)
+                </td>
+                <td>
+                    <img src="/img/galery/@item.Image1" height="50" />
+                </td>
+                <td>
+                    <img src="/img/galery/@item.Image2" height="50" />
+                </td>
+                <td>
+                    <img src="/img/galery/@item.Image3" height="50" />
+                </td>
+                <td>
+                    <img src="/img/galery/@item.Image4" height="50" />
+                </td>
+                <td>
+                    <img src="/img/galery/@item.Image5" height="50" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Client)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WorkingDate)
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

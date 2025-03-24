@@ -1,0 +1,27 @@
+﻿@model About
+
+@{
+    ViewData["Title"] = "Hakkımızda Detay";
+}
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="/img/about/@Model.Image" height="250" />
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-4">
+            @Html.Raw(Model.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Id">Güncelle</a> |
+    <a asp-action="Index">Geri Dön</a>
+</div>
